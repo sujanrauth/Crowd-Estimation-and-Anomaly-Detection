@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+    .div_center{
+
+        margin: 0 auto;
+        position: relative;
+        left: 25%;
+        /* width:150%; /* value of your choice which suits your alignment */ */
+
+    }
+    #button1 , #button2 {
+      display:inline-block;
+      /**other codes**/
+      }
+      .main {
+        border: 2px solid black;
+  padding: 10px;
+}
+#orange{
+  border: 2px solid black;
+background-color: white;
+color: black;
+/* padding: 14px 28px; */
+/* font-size: 16px; */
+cursor: pointer;
+}
+#orange {
+  border-color: #ff9800;
+  color: orange;
+}
+
+#orange:hover {
+  background: #ff9800;
+  color: white;
+}
+
+    </style>
+</head>
+<body>
+    <header class="jumbotron jumbotron-fluid bg-dark text-white shadow-lg p-4 mb-4">
+        <div class="container">
+          <center>
+            <h1 class="text-info">CROWD.AI</h1>
+            <h4><p class="p-.3">Bangalore Institute Of Technology Mysore</p></h4>
+          </center>
+        </div>
+    </header>
+
+
+
+    <!--image grid-->
+    <div class="container text-center shadow-lg p-3 mb-5 rounded bg-light">
+        <h3><p><strong>Results</strong></p></h3>
+        <p>
+        <table style="width:400px;float:center  border: 2px solid black;
+          position: relative;
+          top:50%;
+          left:29%  ;">
+          <tr>
+            <td><button type="button" class="btn btn-outline-success">Below Threshold</button>
+            </td>
+            <td><button type="button" id="orange" class="btn btn-outline-warning">10% Above Threshold</button>
+            </td>
+            <td><button type="button" class="btn btn-outline-danger">Above Threshold</button>
+            </td>
+          </tr>
+        </table>
+      </p>
+        <div>
+        <table style="width:400px;float:center  border: 2px solid black;
+          position: relative;
+          top:50%;
+          left:32%  ;">
+          <tr ><center>
+            <td class="main" style="text-align:center">  <a href="./static/result/1.jpeg">
+                <img src="./static/result/1.jpeg" alt="img" style="width:100%">
+              </a></td>
+              <td  class="main" style="text-align:center">  <a href="./static/result/1.jpeg">
+                  <img src="./static/result/2.jpeg" alt="img" style="width:100%">
+                </a></td>
+                <td class="main" style="text-align:center;style=height:100px;">
+                  <!-- <center> -->
+                <p style="color:{{colorlist[0]}};font-size:20px;font-weight: bold;position:relative;bottom: -8px;">{{countlist[0]}}</p>
+              <!-- </center> -->
+              </td>
+            </center>
+          </tr>
+          <tr ><center>
+            <td class="main"style="text-align:center">  <a href="./static/result/1.jpeg">
+                <img src="./static/result/4.jpeg" alt="img" style="width:100%">
+              </a></td>
+              <td class="main"style="text-align:center">  <a href="./static/result/1.jpeg">
+                  <img src="./static/result/5.jpeg" alt="img" style="width:100%">
+                </a></td>
+                <td class="main"style="text-align:center;style=height:100px;">
+                  <!-- <center> -->
+                <p style="color:{{colorlist[1]}};font-size:20px;font-weight: bold;position:relative;bottom: -8px;">{{countlist[1]}}</p>
+              <!-- </center> -->
+              </td>
+            </center>
+          </tr>
+          <tr ><center>
+            <td class="main"style="text-align:center">  <a href="./static/result/1.jpeg">
+                <img src="./static/result/7.jpeg" alt="img" style="width:100%">
+              </a></td>
+              <td class="main" style="text-align:center">  <a href="./static/result/1.jpeg">
+                  <img src="./static/result/8.jpeg" alt="img" style="width:100%">
+                </a></td>
+                <td class="main" style="text-align:center;style=height:100px;">
+                  <!-- <center> -->
+                <p style="color:{{colorlist[2]}};font-size:20px;font-weight: bold;position:relative;bottom: -8px;">{{countlist[2]}}</p>
+              <!-- </center> -->
+              </td>
+            </center>
+          </tr>
+          <tr ><center>
+            <td class="main"style="text-align:center">  <a href="./static/result/1.jpeg">
+                <img src="./static/result/10.jpeg" alt="img" style="width:100%">
+              </a></td>
+              <td class="main" style="text-align:center">  <a href="./static/result/1.jpeg">
+                  <img src="./static/result/11.jpeg" alt="img" style="width:100%">
+                </a></td>
+                <td class="main" style="text-align:center;style=height:100px;">
+                  <!-- <center> -->
+                <p style="color:{{colorlist[3]}};font-size:20px;font-weight: bold;position:relative;bottom: -8px;">{{countlist[3]}}</p>
+              <!-- </center> -->
+              </td>
+            </center>
+          </tr>
+          <tr ><center>
+            <td class="main" style="text-align:center">  <a href="./static/result/1.jpeg">
+                <img src="./static/result/13.jpeg" alt="img" style="width:100%">
+              </a></td>
+              <td class="main" style="text-align:center">  <a href="./static/result/1.jpeg">
+                  <img src="./static/result/14.jpeg" alt="img" style="width:100%">
+                </a></td>
+                <td class="main" style="text-align:center;style=height:100px;">
+                  <center>
+                <p style="color:{{colorlist[4]}};font-size:25px;font-weight: bold;position:relative;bottom: -8px;">{{countlist[4]}}</p>
+              </center>
+              </td>
+            </center>
+          </tr>
+        </table>
+      </div>
+      </div>
+
+          <form action="/" class="m-2 text-center">
+          <button class="btn btns btn-primary" id="button1">Home</button>
+          <input type="button" class="btn btn btn-primary" id="button2"value="Print" onClick="window.print()">
+          </form>
+  </body>
+  </html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <!--<style>
+      .about {
+        margin: 0 au2o;
+        position: absolute;
+        left: 608px;
+        top: 500px;
+        /* height:100%; */
+        width: 47%;
+        /* value of your choice which suits your alignment */
+      }
+      /* .contact{
+
+        /* margin: 0 au2o; */
+      /* position: absolute;
+        /* left: 608px; */
+      /* top:400px; */
+      /* height:100%; */
+      /* width:47%; */
+      /* value of your choice which suits your alignment */
+
+      /* }  */
+    </style>-->
+  </head>
+  <body>
+    <header
+      class="jumbotron jumbotron-fluid bg-dark text-white shadow-lg p-4 mb-4"
+    >
+      <div class="container">
+        <center>
+          <h1 class="text-info">CROWD.AI</h1>
+          <h4><p class="p-.3">Bangalore Institute Of Technology </p></h4>
+          <!-- <p class="p-.5">Maharaja Institute Of Technology</p> -->
+        </center>
+      </div>
+    </header>
+
+    {% if message %}
+    <div class="alert alert-warning text-center container">
+      <strong>{{ message }}!</strong>
+    </div>
+    {% endif %}
+
+    <main>
+      <div class="container text-white">
+        <div class="row">
+          <div class="col-sm">
+            <div class="card shadow-lg p-3 mb-5 rounded bg-dark">
+              <div class="card-body">
+                <h3 class="card-title">
+                  <center>Crowd Estimation</center>
+                </h3>
+                <strong>
+                  <p class="text-info">
+                    NOTE: Supported files - jpg,jpeg,png,mp4
+                  </p>
+                </strong>
+                <br />
+                <h5 class="text-info">
+                  Horizontal Threshold
+                </h5>
+                <form
+                  action="/upload"
+                  method="POST"
+                  enctype="multipart/form-data"
+                >
+                  <div class="from-group">
+                    <label for="q1">First Quadrant:</label>
+                    <input
+                      type="text"
+                      name="q1"
+                      id="q1"
+                      class="form-control"
+                      placeholder="First Quadrant threshold"
+                      required
+                    />
+                    <label for="q2" class="mt-1">Second Quadrant:</label>
+                    <input
+                      type="text"
+                      name="q2"
+                      id="q2"
+                      class="form-control"
+                      placeholder="Second Quadrant threshold"
+                      required
+                    />
+                    <label for="q3" class="mt-1">Third Quadrant:</label>
+                    <input
+                      type="text"
+                      name="q3"
+                      id="q3"
+                      class="form-control"
+                      placeholder="Third Quadrant threshold"
+                      required
+                    />
+                    <label for="q4" class="mt-1">Fourth Quadrant:</label>
+                    <input
+                      type="text"
+                      name="q4"
+                      id="q4"
+                      class="form-control"
+                      placeholder="Fourth Quadrant threshold"
+                      required
+                    />
+                    <h5 class="mt-3 text-info">Overall Threshold</h5>
+                    <label for="oq">Overall Threshold:</label>
+                    <input
+                      type="text"
+                      name="oq"
+                      id="oq"
+                      class="form-control"
+                      placeholder="Overall threshold"
+                      required
+                    />
+                    <input
+                      type="file"
+                      name="file"
+                      id=""
+                      class="btn btn-info mt-2 mb-2 mr-sm-2 form-control"
+                      required
+                    />
+                    <button class="btn btn-primary mt-2">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="row">
+              <div class="col-sm">
+                <div class="card shadow-lg p-3 mb-4 rounded bg-dark">
+                  <div class="card-body">
+                    <h3 class="card-title">
+                      <center>Anomaly Detection</center>
+                    </h3>
+                    <strong>
+                      <p class="text-info">NOTE: Supported files - mp4</p>
+                    </strong>
+                    <br />
+                    <h5 class="text-info">
+                      Upload video
+                    </h5>
+                    <form
+                      action="/anomaly"
+                      method="POST"
+                      enctype="multipart/form-data"
+                    >
+                      <div class="form-group">
+                        <input
+                          type="file"
+                          name="file"
+                          class="btn btn-info form-control"
+                          required
+                        />
+                        <button class="btn btn-primary mt-2">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <div class="col-sm">
+                <div class="card shadow-lg p-3 mb-5 mt-2 rounded bg-dark">
+                  <div class="card-body">
+                    <h3 class="card-title">
+                      <center><a href="/" style="color:white;">ABOUT</a></center>
+                    </h3>
+                    <p>
+                      CROWD.AI is software developed by the students of Bangalore
+                      Institute of Technology.
+                    </p>
+                    <p>
+                      It can estimate the crowd count in a given video or an
+                      image as well as violence detection for a given video.
+                    </p>
+                    <p>
+                      The left block is for Crowd Estimation and the right block
+                      is for Violence Detection.
+                    </p>
+                    <div class="contact">
+                      <p>Contact :</p>
+                      Team 10
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
